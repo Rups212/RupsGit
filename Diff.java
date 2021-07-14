@@ -4,5 +4,6 @@ public class Diff{
     {
         
         system.out.println("Hellow World !!");
+        system.out.println("Hellow World !!");
     }
 }
