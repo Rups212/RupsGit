@@ -1,0 +1,16 @@
+<aura:component controller="LearningAuraController">
+	
+    <aura:attribute name="mapValues" type="object" />
+    
+    <lightning:button label="Iteration" onclick="{!c.getMapValues}" />
+    <br/><br/>
+    <aura:iteration items ="{!v.mapValues}" var= "mapKey" indexVar="key" >
+    	<h1><strong><p>{!mapKey.key}</p></strong></h1>
+    	
+        <aura:iteration items ="{!mapKey.value}" var="mapValue">
+        	<p>{!mapValue}</p>
+        </aura:iteration>
+        
+        <br/><br/><br/>
+    </aura:iteration>
+</aura:component>

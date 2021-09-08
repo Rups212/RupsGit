@@ -1,0 +1,15 @@
+<aura:component >
+
+    <aura:registerEvent name="cmpEventName" type="c:TraningCompoentEvent_Event" />
+    <div class="slds-page-header">
+        <div class="slds-media__body">
+    	<h1 class="slds-page-header__title slds-truncate slds-align-middle">Case Study of component Event</h1>
+    </div>
+    </div>
+    
+    <br/>
+    <br/>
+    
+    <lightning:button label="Click here to find Component Event" onclick="{!c.fireComponentEvent}" />
+    
+</aura:component>

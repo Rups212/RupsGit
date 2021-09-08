@@ -1,0 +1,27 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+	
+    <aura:attribute name="EligibleOrNot" type="Boolean" default="true"/>
+    <aura:attribute name="checkTest" type="Boolean" default="false"/>
+    
+    <ui:inputText label="First Name" aura:id="Fname" placeholder="First Name"/>
+    <ui:inputText label="Last Name" aura:id="Lname" placeholder="Last Name"/>
+    <ui:inputText label="Age" aura:id="Age" placeholder=" Your Age"/>
+    <ui:button label="Check Eligibility" aura:id="ButtonAction" press="{!c.getEligibility}" />
+    <ui:button label="Reset" aura:id="ResetButton" press="{!c.ClearAllData}" />
+    
+    <aura:if isTrue="{!v.checkTest}">
+        <aura:if isTrue="{!v.EligibleOrNot}">
+            
+            Congrats ! You are Eligible
+            <ui:button label="Give Vote"/>
+            
+            <aura:set attribute="else">
+            Sorry !! You are not Eligible
+                <ui:button label="Cancel Vote"/>
+            </aura:set>
+            
+            
+        </aura:if>
+    </aura:if>
+        
+</aura:component>

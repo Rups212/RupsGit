@@ -1,0 +1,13 @@
+<aura:component >
+    <aura:registerEvent name="cmpEventName" type="c:TestExample_Event" />
+    
+    <h1> !!!!!!Test Example !!!!Component!!!!</h1>
+    <br/>
+    <br/>
+    <p><lightning:button name="TestButton" label="Click here !!" onclick="{!c.SaveMessageToEvent}" />
+    </p>
+    
+    
+    
+    
+</aura:component>

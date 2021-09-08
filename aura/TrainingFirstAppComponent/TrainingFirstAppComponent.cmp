@@ -1,0 +1,24 @@
+<aura:component 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                access="global" >
+
+    <ui:inputText label="First Name" aura:id="Fname" placeholder="First Name"/>
+    <ui:inputText label="Last Name" aura:id="Lname" placeholder="Last Name"/>
+    <ui:button aura:id="ButtonForAction" label="Submit" press="{!c.getInfo}"/>
+   	<ui:outputText aura:id="NameToDisplay" value=""/>
+    
+    
+    
+    
+    
+     <!-- here we need to write all UI logic 
+    <aura:attribute name="EmpFirstName" type="string" default="Jonh" 
+                    description="This is field for emp first name"/>
+    <aura:attribute name="EmpLastName" type="string" default="Simhha" 
+                    description="This is field for emp last name"/>
+    
+    The Name of Employee we just stored is = {!v.EmpFirstName},{!v.EmpLastName}
+
+		*************************************************-->
+    
+</aura:component>

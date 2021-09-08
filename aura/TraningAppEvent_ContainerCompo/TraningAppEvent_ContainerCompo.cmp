@@ -1,0 +1,6 @@
+<aura:component >
+	
+    <c:TraningAppEvent_NotifierCompo />
+    <c:TraningAppEvent_HandlerCompo />
+    
+</aura:component>

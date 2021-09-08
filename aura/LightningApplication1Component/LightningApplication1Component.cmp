@@ -1,0 +1,33 @@
+<aura:component controller="LightningApplication1Class">
+	
+    
+   <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> 
+    
+    <aura:attribute name="oppList" type="Opportunity[]"/>
+    
+    <h2>Opportunity</h2>
+    <table>
+        <thead>
+        <tr>
+    		<th>Name</th>
+            <th>Phone</th>
+            <th>Stage</th>
+            <th>Quantity</th>
+        </tr>
+        </thead>
+       <tbody>
+        	<aura:iteration items="{!v.oppList}" var="opp" >
+            <tr>
+          
+            	<td>{!opp.Name}</td>   
+             
+            	<td>{!opp.Account_Phone__c}</td>    
+       
+            	<td>{!opp.StageName}</td>    
+           
+            	<td>{!opp.TotalOpportunityQuantity}</td>    
+            </tr> 
+            </aura:iteration>
+        </tbody>
+    </table> 
+</aura:component>

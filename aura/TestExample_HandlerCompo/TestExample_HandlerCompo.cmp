@@ -1,0 +1,13 @@
+<aura:component >
+	
+    <aura:attribute name="MessageFromEvent" type="String" />
+    <aura:attribute name="NoOfEvents" type="Integer" default="0" />
+    
+    <aura:handler name="cmpEventName" event="c:TestExample_Event" action="{!c.handleComponentEvent}" />
+    <c:TestExample_NotifierCompo />
+    
+    <p>{!v.MessageFromEvent}</p>
+    <p>No Of Events called : {!v.NoOfEvents}</p>
+    
+    
+</aura:component>

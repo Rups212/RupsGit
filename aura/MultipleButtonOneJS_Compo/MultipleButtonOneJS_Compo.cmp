@@ -1,0 +1,47 @@
+<aura:component >
+	
+    <aura:attribute name="whichButtonPressed_ID" type="String" />
+    <aura:attribute name="whichButtonPressed_Name" type="String" />
+    
+    
+    <h1> This is the Example of Lightning Buttons</h1>
+    <div class="slds-page-header">
+        <div class="slds-media__body">
+    	<h1 class="slds-page-header__title slds-truncate slds-align-middle">Get Button Source</h1>
+    </div>
+    </div>
+    
+    <p> You Clicked :: {!v.whichButtonPressed_ID}</p>
+    <br/>
+    <p>You Clicked :: {!v.whichButtonPressed_Name}</p>
+    
+    <lightning:button name="Button One" label="Pls Click me" aura:id="button1" onclick="{!c.callJSCode}" />
+    <lightning:button name="Button Two" label="Click me too" aura:id="button2" onclick="{!c.callJSCode}" />
+    <br/><br/>
+   ---------------Locale Details ---------------
+    <br/>
+    <h1>Language of User :Ans = {!$Locale.language}</h1>
+    <br/>
+    <h1>Tizezone of User :Ans = {!$Locale.timezone}</h1>
+    <br/>
+    <h1>Number format of framework :Ans = {!$Locale.numberFormat}</h1>
+    <br/>
+    <h1>Currency of User :Ans = {!$Locale.currency}</h1>
+    <br/>
+    
+    ---------------Browser Details ---------------
+    <br/>
+    <h1>Is the device a Tablet :Ans = {!$Browser.isTablet}</h1>
+    <br/>
+    <h1>Is the device a Phone :Ans = {!$Browser.isPhone}</h1>
+    <br/>
+    <h1>Is the device a Android :Ans = {!$Browser.isAndroid}</h1>
+    <br/>
+    <h1>Which browser user is using :Ans = {!$Browser.formFactor}</h1>
+    <br/>
+    
+    
+    
+    
+    
+</aura:component>

@@ -1,0 +1,44 @@
+<aura:component controller="GetContactsFromServer">
+	
+    <aura:attribute name="conlist" type="Contact" default="{'sobjectType':'Contact',
+                                                            'FirstName':'',
+                                                           'LastName':'',
+                                                            'Phone' : '',
+                                                            'Email' : ''                                                     
+                                                            }" />
+    <h2>Contact Registration Form :</h2><br></br>
+    <ui:inputText label="First Name" value="{!v.conlist.FirstName}" />
+    <ui:inputText label="Last Name" value="{!v.conlist.LastName}"/>
+    <ui:inputText label= "Phone" value="{!v.conlist.Phone}"/>
+    <ui:inputText label ="Email" value="{!v.conlist.Email}"/>
+    <lightning:button label="Insert" onclick="{!c.insertContact}"/>
+     <lightning:button label="Update" onclick="{!c.updateContact}"/>
+    <lightning:button label="Delete" onclick="{!c.deleteContact}"/>
+    <br/><br/>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/eMNT68adkd0?autoplay=1?controls=1" />
+    
+    
+    <!-- Get Contact from Server code 
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"></aura:handler>
+    <aura:attribute name="conlist" type="Contact[]"/>
+    <h2>Contact list</h2>
+    <table>
+    	<thead>
+            <tr>
+        		<th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.conlist}" var="con">
+            <tr>
+            	<td>{!con.Name}</td>
+                <td>{!con.Phone}</td>
+                <td>{!con.Email}</td>
+            </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+    -->
+</aura:component>
